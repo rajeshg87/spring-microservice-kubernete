@@ -1,0 +1,38 @@
+<!--Welcome to {{ parentData }}! -->
+
+<form [formGroup]="userForm" (ngSubmit)="saveUser()">
+    <div class="form-group">
+        <label>Name:</label>
+        <input formControlName="name">
+        <label>City:</label>
+        <input formControlName="city">
+        <label>Age:</label>
+        <input formControlName="age">
+
+        <button type="submit" class="btn btn-default" aria-label="Left Align">
+            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+        </button>
+
+        <button (click)="deleteUser()" class="btn btn-default" aria-label="Left Align" 
+                [disabled]="removeUserDisabled">
+            <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </button>
+
+         <button (click)="deleteAll()" class="btn btn-default" aria-label="Left Align">
+            Delete All
+        </button>
+
+    </div>
+</form>
+
+
+
+<ag-grid-angular style="width: 100%; height: 800px;" 
+                 class="ag-theme-balham" 
+                 (gridReady)="onGridReady($event)"
+                 [columnDefs]="columnDefs" 
+                 [rowData]="rowData" 
+                 (rowClicked)="onRowClicked($event)"
+                 rowSelection="single">
+</ag-grid-angular>
+

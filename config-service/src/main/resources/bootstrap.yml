@@ -1,0 +1,12 @@
+server:
+   port: 8088
+spring:
+   profiles:
+      active: native
+      cloud:
+         config:
+            server:
+               git: 
+                  uri: https://github.com/rajeshg87/spring-microservice-kubernete/tree/master/config-service/src/main/resources/config
+               #native:
+                 #searchLocations: file:///Users/rajeshg87/git/spring-micro-service/spring-micro-service/config-service/src/main/resources/config

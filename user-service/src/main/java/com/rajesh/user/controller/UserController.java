@@ -19,10 +19,12 @@ import lombok.extern.slf4j.Slf4j;
 
 @RestController("user")
 @CrossOrigin(origins = "http://microservices.info:8080", maxAge = 3600)
+//@CrossOrigin(origins = "http://localhost:4200", maxAge = 3600)
 @Slf4j
 public class UserController {
 
 	@Autowired
+	
 	UserRepository repository;
 
 	@PostMapping("/user/add")

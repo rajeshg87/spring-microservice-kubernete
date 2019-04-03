@@ -13,9 +13,9 @@ const httpOptions = {
 })
 export class UserService {
 
-     // private user_url = 'http://localhost:8080/user';
+      private user_url = 'http://localhost:8080/user';
     // user_url = 'http://192.168.99.115:31001/user/user';
-    private user_url = 'http://microservices.info/user/user';
+    // private user_url = 'http://microservices.info/user/user';
 
     private add_user_url = this.user_url + '/add';
 

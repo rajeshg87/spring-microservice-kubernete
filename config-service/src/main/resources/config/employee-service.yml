@@ -1,9 +1,10 @@
 data:
    mongodb:
-     host: 127.0.0.1
-     port: 27017
-     database: employee
-      #uri: mongodb://${MONGO_USERNAME}:${MONGO_PASSWORD}@mongodb/${MONGO_DATABASE}
+     uri: mongodb://${MONGO_USERNAME}:${MONGO_PASSWORD}@mongodb/${MONGO_DATABASE}
+     
+#host: 127.0.0.1
+#port: 27017
+#database: employee
       
 logging:
   pattern: 
